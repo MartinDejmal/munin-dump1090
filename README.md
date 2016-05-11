@@ -4,17 +4,17 @@ This plugin is supposed to be run on machine running dump1090 directly. This mac
 
 ## installation
 
-* place downloaded file dump1090 into /usr/share/munin/plugins
-* change attributes to make it executable: sudo chmod +x /usr/share/munin/plugins
-* make symlink into /etc/munin/plugins: sudo ln -s /usr/share/munin/plugins/dump1090 /etc/munin/plugins/dump1090
+* place downloaded file dump1090 into ```/usr/share/munin/plugins```
+* change attributes to make it executable: ```sudo chmod +x /usr/share/munin/plugins```
+* make symlink into /etc/munin/plugins: ```sudo ln -s /usr/share/munin/plugins/dump1090 /etc/munin/plugins/dump1090```
 * restart munin-node
  
 ## check
 After restarting munin-node you may check whether plugin works well:
-* telnet to machine running munin-node: telnet localhost 4949
-* enter following command: fetch dump1090
+* telnet to machine running munin-node: ```telnet localhost 4949```
+* enter following command: ```fetch dump1090```
 * you should get output like this:
-
+```
 $ telnet localhost 4949
 Trying 127.0.0.1...
 Connected to localhost.
@@ -25,7 +25,7 @@ aircraft.value 114
 invalid.value 20
 .
 quit
-
-* leave telnet session by entering following command: quit
+```
+* leave telnet session by entering following command: ```quit```
 
 
