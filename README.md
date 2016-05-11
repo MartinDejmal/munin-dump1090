@@ -2,6 +2,12 @@
 Munin plugin for monitoring dump1090 instance.
 This plugin is supposed to be run on machine running dump1090 directly. This machine should run munin-node too.
 
+## prerequisites
+* munin-node
+* dump1090
+* curl 
+
+
 ## installation
 
 * place downloaded file dump1090 into ```/usr/share/munin/plugins```
