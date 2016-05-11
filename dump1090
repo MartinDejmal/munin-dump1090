@@ -1,0 +1,23 @@
+#!/bin/sh
+case $1 in
+   config)
+        cat <<'EOM'
+graph_title dump1090 aircraft seen
+graph_vlabel count
+aircraft.label aircraft
+invalid.label invalid aircraft
+graph_category rtl-sdr
+graph_info Number of aircraft seen by dump1090.
+aircraft.info Number of aircraft seen by dump1090.
+invalid.info Number of invalid aircraft seen by dump1090.
+EOM
+        exit 0;;
+esac
+
+output=$(curl -s 127.0.0.1/data.json)
+aircraft=$(echo "$output" | grep '"validposition":1' | wc -l)
+invalid=$(echo "$output" | grep '"validposition":0' | wc -l)
+
+echo "aircraft.value" $aircraft
+echo "invalid.value" $invalid
+
