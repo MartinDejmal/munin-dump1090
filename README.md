@@ -36,4 +36,4 @@ quit
 
 ## example outuput
 After a couple of minutes you will see category rtl-sdr within your munin site. Example daily graph should look like this.
-![alt text][(https://github.com/MartinDejmal/munin-dump1090/blob/master/dump1090-day.png) "example output"]
+![alt text](https://raw.githubusercontent.com/MartinDejmal/munin-dump1090/master/dump1090-day.png "example output")
