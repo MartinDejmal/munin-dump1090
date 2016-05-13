@@ -34,4 +34,6 @@ quit
 ```
 * leave telnet session by entering following command: ```quit```
 
-
+## example outuput
+After a couple of minutes you will see category rtl-sdr within your munin site. Example daily graph should look like this.
+![Example outuput][dump1090-day.png]
